@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/ice/Library/Developer/Shared/Documentation/DocSets/com.lengyi.scaniosapp.ScaniOSApp.docset
+Time: 2017-03-17 09:16:26 +0000
