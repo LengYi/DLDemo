@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/ice/Library/Developer/Shared/Documentation/DocSets/com.lengyi.dlmetadiator.DLMetadiator.docset
+Time: 2017-03-14 09:25:45 +0000
