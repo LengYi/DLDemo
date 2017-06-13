@@ -1,0 +1,12 @@
+ [
+  {"moduleID":10001,
+  "targetVC":"TestViewController_1"
+  },
+  {"moduleID":10002,
+  "targetVC":"TestViewController_2"
+  },
+  {"moduleID":10003,
+  "targetVC":"TestViewController_3",
+  "accessRight":1
+  }
+]

@@ -10,4 +10,16 @@
 
 @implementation DLRouterConfig
 
++ (DLRouterConfig *)routerConfig:(NSArray<NSString *> *)routerJsonArray
+                     specialJump:(NSString *)sepcialJumpList
+                       urlScheme:(NSString *)urlScheme
+                       rootNavVC:(UINavigationController *)rootNavVC{
+    DLRouterConfig *routerConfig = [[DLRouterConfig alloc] init];
+    routerConfig.routerJsonArray = routerJsonArray;
+    routerConfig.sepcialJumpList = sepcialJumpList;
+    routerConfig.urlScheme = urlScheme;
+    routerConfig.rootNavVC = rootNavVC;
+    return routerConfig;
+}
+
 @end

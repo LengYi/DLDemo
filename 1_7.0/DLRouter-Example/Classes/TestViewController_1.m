@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"正常跳转";
+    self.view.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.label];
 }
 

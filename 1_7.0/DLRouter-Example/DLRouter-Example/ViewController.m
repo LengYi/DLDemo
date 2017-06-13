@@ -12,6 +12,7 @@
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *dataArr;
+@property (nonatomic,strong) NSString *backStr; // 回调参数
 @end
 
 @implementation ViewController
@@ -20,6 +21,17 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    if (_backStr) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:_backStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    _backStr = nil;
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -35,6 +47,7 @@
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [ActionManager dealAction:indexPath.row];
 }
 
@@ -51,7 +64,14 @@
 
 - (NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = @[@"正常跳转"];
+        _dataArr = @[@"正常跳转",
+                     @"正常跳转+传参",
+                     @"正常跳转+回调参数",
+                     @"路由跳转",
+                     @"路由跳转+传参",
+                     @"路由跳转+权限校验",
+                     @"Present跳转",
+                     @"打开指定的页面"];
     }
     
     return _dataArr;
