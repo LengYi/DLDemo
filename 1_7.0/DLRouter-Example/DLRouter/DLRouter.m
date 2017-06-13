@@ -86,10 +86,17 @@
     if(!options){
         options = [RouterOptions defaultOptions];
     }
+    // 配置路由权限,默认是default,如果有重载该方法,则获取到新的权限
+    options = [DLAccessRightHandler configAccessRight:options];
     
     UIViewController *vc = [self configVCWithClassName:vcClassName options:options];
     if (![self routerViewController:vc options:options]) {
-        
+        // 跳转失败
+        return;
+    }
+    
+    if (block) {
+        block();
     }
 }
 
@@ -241,6 +248,10 @@
 
 + (BOOL)routerViewController:(UIViewController *)vc options:(RouterOptions *)options{
     // 跳转之前先检查是否有相关的跳转权限,没有则不跳转并进行异常处理
+    if(![DLAccessRightHandler validRightToOpenVC:options]){
+        [DLAccessRightHandler handleNoRightVC:options];
+        return NO;
+    }
     
     UINavigationController *nav = [DLRouter shareInstance].config.rootNavVC;
     if (!nav && [nav isKindOfClass:[UINavigationController class]]) {

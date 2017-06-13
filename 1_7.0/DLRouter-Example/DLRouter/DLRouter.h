@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DLRouterConfig.h"
+#import "DLAccessRightHandler.h"
+
 
 typedef NS_ENUM(NSInteger,AccessRight){
-    DLRouterAccessRight0 = 0,
+    DLRouterAccessRightDefault = -1,
+    DLRouterAccessRight0,
     DLRouterAccessRight1,
     DLRouterAccessRight2,
     DLRouterAccessRight3,
@@ -20,7 +23,7 @@ typedef NS_ENUM(NSInteger,AccessRight){
 
 #pragma mark - RouterRight
 @interface RouterRight : NSObject
-@property (nonatomic,assign) AccessRight *accessRight;   // 访问模块的权限
+@property (nonatomic,assign) AccessRight accessRight;   // 访问模块的权限
 @property (nonatomic,strong) NSString *info;             // 辅助信息
 
 + (instancetype)defaultRouterRight;

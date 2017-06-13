@@ -23,6 +23,7 @@
 		58B8D4201EEFC3580001F173 /* modules.json in Resources */ = {isa = PBXBuildFile; fileRef = 58B8D41F1EEFC3580001F173 /* modules.json */; };
 		58B8D4271EEFCEAB0001F173 /* TestViewController_4.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D4261EEFCEAB0001F173 /* TestViewController_4.m */; };
 		58B8D42A1EEFD0DB0001F173 /* TestViewController_5.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D4291EEFD0DB0001F173 /* TestViewController_5.m */; };
+		58B8D42F1EEFE4400001F173 /* DLAccessRightHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D42E1EEFE4400001F173 /* DLAccessRightHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,9 @@
 		58B8D4261EEFCEAB0001F173 /* TestViewController_4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController_4.m; sourceTree = "<group>"; };
 		58B8D4281EEFD0DB0001F173 /* TestViewController_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController_5.h; sourceTree = "<group>"; };
 		58B8D4291EEFD0DB0001F173 /* TestViewController_5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController_5.m; sourceTree = "<group>"; };
+		58B8D42C1EEFE33A0001F173 /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		58B8D42D1EEFE4400001F173 /* DLAccessRightHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAccessRightHandler.h; sourceTree = "<group>"; };
+		58B8D42E1EEFE4400001F173 /* DLAccessRightHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAccessRightHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				584C4DE41ED437D0002C48C9 /* main.m */,
+				58B8D42C1EEFE33A0001F173 /* Prefix.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +127,8 @@
 				584C4DFF1ED43941002C48C9 /* DLRouterConfig.m */,
 				58B8D41C1EEFB8E70001F173 /* DLJsonFileHandler.h */,
 				58B8D41D1EEFB8E70001F173 /* DLJsonFileHandler.m */,
+				58B8D42D1EEFE4400001F173 /* DLAccessRightHandler.h */,
+				58B8D42E1EEFE4400001F173 /* DLAccessRightHandler.m */,
 			);
 			path = DLRouter;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B8D42F1EEFE4400001F173 /* DLAccessRightHandler.m in Sources */,
 				58B8D41E1EEFB8E70001F173 /* DLJsonFileHandler.m in Sources */,
 				584C4DEB1ED437D0002C48C9 /* ViewController.m in Sources */,
 				58B8D41B1EEEA0850001F173 /* TestViewController_3.m in Sources */,
@@ -351,6 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH63RWQD5Z;
 				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "DLRouter-Example/Prefix.h";
 				INFOPLIST_FILE = "DLRouter-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH63RWQD5Z;
 				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "DLRouter-Example/Prefix.h";
 				INFOPLIST_FILE = "DLRouter-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
