@@ -87,7 +87,15 @@
  */
 + (RSA *)RSAPrivateKeyFromBase64:(NSString *)base64PrivateKey;
 
-
+/**
+ *  根据公钥的模指进行格式转换
+ *
+ *  @param modData 公钥模数
+ *  @param expData 公钥指数
+ *
+ *  @return RSA 格式公钥
+ */
++ (RSA *)publicKeyFormMod:(NSData *)modData exp:(NSData *)expData;
 #pragma mark --- 公钥加密->私钥解密
 /**
  *  公钥加密

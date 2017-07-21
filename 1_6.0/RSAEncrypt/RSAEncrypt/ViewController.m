@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "RSAEncryptManager.h"
 #import "RSAEncrypt.h"
 #import "RSAEncrypt+SecKey.h"
+#import "NSString+Encrypto.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) UITextView *textView;
@@ -31,6 +31,8 @@
 @property (nonatomic,assign) SecKeyRef publicKeyRef;  // SecKey 公钥
 
 @property (nonatomic,strong) NSString *originStr;   // 待加密的明文
+@property (nonatomic,strong) NSData *publicModData;  // 公钥模数
+@property (nonatomic,strong) NSData *publicExpData;  // 公钥指数
 
 @end
 
@@ -39,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _originStr = @"我是明文加密我,蹂躏我吧! Hello Kity!!! 66666";
+    _originStr = @"我是明文加密我,蹂躏我吧!%#￥8*~·@ Hello Kity!!! 66666";
     
     [self createOpensslActionView];
     [self createSecKeyActionView];
@@ -48,16 +50,13 @@
 
 - (void)createOpensslActionView{
     NSArray *arr = @[@"生成秘钥 RSA->PEM",
-                     @"私钥 PEM->Base64",
-                     @"公钥 PEM->Base64",
-                     @"私钥 Base64->RSA",
-                     @"公钥 Base64->RSA",
+                     @"公私钥 PEM->Base64",
+                     @"公私钥 Base64->RSA",
                      @"模指生成公钥",
                      @"私钥加密->公钥解密",
-                     @"公钥加密->私钥解密",
-                     @"秘钥 Base64->SecKeyRef"];
+                     @"公钥加密->私钥解密",];
     
-    CGFloat width = 210;
+    CGFloat width = 180;
     CGFloat height = 30;
     CGFloat offsetX = 10;
     CGFloat offsetY = 10;
@@ -66,6 +65,7 @@
         btn.tag = 100 + i;
         btn.backgroundColor = [UIColor greenColor];
         [btn setTitle:arr[i] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(pressOpensslAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
@@ -74,13 +74,11 @@
 
 - (void)createSecKeyActionView{
     NSArray *arr = @[@"生成秘钥 REF->NSData",
-                     @"读取私钥(PEM)",
-                     @"读取公钥(PEM)",
-                     @"模指生成公钥",
-                     @"私钥加密->公钥解密",
+                     @"秘钥 Base64->SecKeyRef",
+                     @"私钥加签->公钥验签",
                      @"公钥加密->私钥解密"];
     
-    CGFloat width = 210;
+    CGFloat width = 180;
     CGFloat height = 30;
     CGFloat offsetX = [UIScreen mainScreen].bounds.size.width - 10 - width;
     CGFloat offsetY = 10;
@@ -90,6 +88,7 @@
         btn.tag = 100 + i;
         btn.backgroundColor = [UIColor greenColor];
         [btn setTitle:arr[i] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(pressSecKeyAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
@@ -120,54 +119,59 @@
         }
             break;
         case 1:{ // 读取私钥 PEM->Base64
-            if (!_privateKeyPem) {
+            if (!_privateKeyPem || !_publickKeyPem) {
                 [self showText:@"请先操作 生成秘钥 RSA->PEM"];
             }else{
                 _privateKeyBase64 = [RSAEncrypt base64EncodeFromPem:_privateKeyPem];
-                
-                NSString *logText = [NSString stringWithFormat:@"openssl 私钥 base64读取成功！\n privateBase64:\n%@\n",_privateKeyBase64];
-                [self showText:logText];
-            }
-        }
-            break;
-        case 2:{ // 读取公钥 PEM->Base64
-            if (!_publickKeyPem) {
-                [self showText:@"请先操作 生成秘钥 RSA->PEM"];
-            }else{
                 _publickKeyBase64 = [RSAEncrypt base64EncodeFromPem:_publickKeyPem];
                 
-                NSString *logText = [NSString stringWithFormat:@"openssl 公钥 base64读取成功！\n publickBase64:\n%@\n",_publickKeyBase64];
+                NSString *logText = [NSString stringWithFormat:@"openssl 公私钥 base64读取成功！\n privateBase64==>:\n%@\n publickBase64==>:\n%@\n",_privateKeyBase64,_publickKeyBase64];
                 [self showText:logText];
             }
         }
             break;
-        case 3:{// 读取私钥 Base64->RSA
-            if (!_privateKeyBase64) {
-                [self showText:@"请先操作 读取私钥 PEM->Base64"];
+        case 2:{// 公私钥 PEM->RSA
+            if (!_privateKeyPem || !_publickKeyPem) {
+                [self showText:@"请先操作 公私钥 PEM->Base64"];
             }else{
-                _privateKey = [RSAEncrypt RSAPrivateKeyFromBase64:_privateKeyBase64];
+                _privateKey = [RSAEncrypt RSAPrivateKeyFromBase64:_privateKeyPem];
                 if (_privateKey) {
                     [self showText:@"openssl 读取私钥pem成功"];
                 }
-            }
-        }
-            break;
-        case 4:{// 读取公钥 Base64->PEM
-            if(!_publickKeyBase64){
-                [self showText:@"请先操作 读取公钥 PEM->Base64"];
-            }else{
-                _publicKey = [RSAEncrypt RSAPublicKeyFromBase64:_publickKeyBase64];
+                
+                _publicKey = [RSAEncrypt RSAPublicKeyFromBase64:_publickKeyPem];
                 if (_publicKey) {
                     [self showText:@"openssl 读取公钥pem成功"];
                 }
             }
         }
             break;
-        case 5:{
-            
+        case 3:{// 模指生成公钥
+            if (!_publicExpData || !_publicModData) {
+                [self showText:@"请先操作 生成秘钥 REF->NSData"];
+            }else{
+                _publicKey = [RSAEncrypt publicKeyFormMod:_publicModData exp:_publicExpData];
+                
+                //公钥加密->Base64
+                NSData *plainData = [_originStr dataUsingEncoding:NSUTF8StringEncoding];
+                NSData *enData = [RSAEncrypt encryptWithPublicKey:_publicKey plainData:plainData];
+                NSString *enBase64Str = [enData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+                
+                //私钥解密
+                 NSData *cipherData = [[NSData alloc] initWithBase64EncodedString:enBase64Str options:NSDataBase64DecodingIgnoreUnknownCharacters];
+                NSData *deData = [RSAEncrypt decryptWithPrivateKeyRef:_privateKeyRef cipherData:cipherData];
+                NSString *deStr = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+                
+                if (deStr && [deStr isEqualToString:_originStr]) {
+                    NSString *logText = [NSString stringWithFormat:@"SecKeyRef公钥 模值转换成 RSA公钥 \n 1.原始明文:\n%@\n 2.加密结果:\n%@\n 3.解密结果:\n%@\n",_originStr,enBase64Str,deStr];
+                    [self showText:logText];
+                }else{
+                    [self showText:@"SecKeyRef公钥 模值转换成 RSA公钥,  RSA公钥加密,SecKeyRef私钥解密失败!!!"];
+                }
+            }
         }
             break;
-        case 6:{// 私钥加密->公钥解密
+        case 4:{// 私钥加密->公钥解密
             if (!_privateKey) {
                 [self showText:@"请先操作 生成秘钥 RSA->PEM"];
             }else{
@@ -190,7 +194,7 @@
             }
         }
             break;
-        case 7:{// 公钥加密->私钥解密
+        case 5:{// 公钥加密->私钥解密
             if (!_publicKey) {
                 [self showText:@"请先操作 生成秘钥 RSA->PEM"];
             }else{
@@ -213,23 +217,6 @@
             }
         }
             break;
-        case 8:{// 秘钥 Base64->SecKeyRef
-            if (!_privateKeyBase64) {
-                [self showText:@"请先操作 读取私钥 PEM->Base64"];
-            }else{
-                NSData *data = [[NSData alloc] initWithBase64EncodedString:_privateKeyBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
-                SecKeyRef privateKeyRef = [RSAEncrypt privateSecKeyFromKeyBits:data];
-                if (privateKeyRef) {
-                    NSData *newData = [RSAEncrypt privateKeyBitsFromSecKey:privateKeyRef];
-                    NSString *base64 = [self base64EncodingWithData:newData];
-                    if(base64 && [base64 isEqualToString:_privateKeyBase64]){
-                        [self showText:@"私钥 Base64->SecKeyRef 转换成功"];
-                    }
-                }
-                
-            }
-        }
-            break;
         default:
             break;
     }
@@ -242,34 +229,89 @@
                                     privateKey:&_privateKeyRef
                                      publicKey:&_publicKeyRef];
             
-            NSData *privateKeyData = [RSAEncrypt privateKeyBitsFromSecKey:_privateKeyRef];
-            NSData *publicKeyData = [RSAEncrypt publicKeyBitsFromSecKey:_publicKeyRef];
+            NSData *privateData = [RSAEncrypt privateKeyBitsFromSecKey:_privateKeyRef];
+            NSData *publicData = [RSAEncrypt publicKeyBitsFromSecKey:_publicKeyRef];
             
-            NSString *logText = [NSString stringWithFormat:@"SecKey 生成密钥成功!\n publicKeyData:\n%@\n privateKeyData:\n%@\n",publicKeyData,privateKeyData];
+            _publicModData = [RSAEncrypt getPublicKeyMod:publicData];
+            _publicExpData = [RSAEncrypt getPublicKeyExp:publicData];
+            
+            _privateKeyPem = [RSAEncrypt privateKeyBase64FromSecKey:_privateKeyRef];
+            _publickKeyPem = [RSAEncrypt publicKeyBase64FromSecKey:_publicKeyRef];
+            
+            NSString *logText = [NSString stringWithFormat:@"SecKey 生成密钥成功!\n _publickKeyPem:\n%@\n _publickKeyBase64:\n%@\n",_privateKeyPem,_publickKeyPem];
             [self showText:logText];
         }
             
             break;
-        case 4:{// 私钥加密->公钥解密
-            if (!_privateKeyRef) {
-                [self showText:@"请先操作 生成秘钥 REF->NSData"];
+        case 1:{// 秘钥 Base64->SecKeyRef
+            BOOL flag = false;
+            if ((!_privateKeyPem || !_publickKeyPem) && flag) {
+                [self showText:@"请先操作 读取私钥 PEM->Base64"];
             }else{
+                // Base64秘钥->SecKeyRef格式
+                NSString *privatePath = [[NSBundle mainBundle] pathForResource:@"private" ofType:@"txt"];
+                NSString *publicPath = [[NSBundle mainBundle] pathForResource:@"public" ofType:@"txt"];
+                _privateKeyBase64 = [NSString stringWithContentsOfFile:privatePath encoding:NSUTF8StringEncoding error:nil];
+                _publickKeyBase64 = [NSString stringWithContentsOfFile:publicPath encoding:NSUTF8StringEncoding error:nil];
+//
+//                _privateKeyBase64 = [[_privateKeyBase64 componentsSeparatedByString:@"-----"] objectAtIndex:2];
+//                _publickKeyBase64 = [[_publickKeyBase64 componentsSeparatedByString:@"-----"] objectAtIndex:2];
+                
+//                NSData *privateData = [[NSData alloc] initWithBase64EncodedString:_privateKeyBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
+//                NSData *publicData = [[NSData alloc] initWithBase64EncodedString:_publickKeyBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
+
+               // publicData = [self stripPublicKeyHeader:publicData];
+                
+                _privateKeyRef = [RSAEncrypt privateSecKeyFromBase64:_privateKeyBase64];
+                //_publicKeyRef = [RSAEncrypt getPublicKeyWithMod:_publicModData exp:_publicExpData];
+                _publicKeyRef = [RSAEncrypt publicSecKeyFromBase64:_publickKeyBase64];
+                
+                if(!_privateKeyRef){
+                    NSLog(@"私钥为空");
+                    return;
+                }
+                
+                if (!_publicKeyRef) {
+                    NSLog(@"公钥为空");
+                    return;
+                }
+                
+                // 公钥加密->私钥解密
                 NSData *originData = [_originStr dataUsingEncoding:NSUTF8StringEncoding];
-                NSData *enData = [RSAEncrypt encryptwithPublicKeyRef:_privateKeyRef plainData:originData];
+                NSData *enData = [RSAEncrypt encryptwithPublicKeyRef:_publicKeyRef plainData:originData];
                 NSString *enBase64Str = [enData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
                 
                 NSData *cipherData = [[NSData alloc] initWithBase64EncodedString:enBase64Str options:NSDataBase64DecodingIgnoreUnknownCharacters];
-                NSData *deData = [RSAEncrypt decryptWithPrivateKeyRef:_publicKeyRef cipherData:cipherData];
+                NSData *deData = [RSAEncrypt decryptWithPrivateKeyRef:_privateKeyRef cipherData:cipherData];
                 NSString *deStr = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
                 if (deStr && [deStr isEqualToString:_originStr]) {
-                    NSString *logText = [NSString stringWithFormat:@"SecKey 私钥加密->公钥解密 \n 1.原始明文:\n%@\n 2.加密结果:\n%@\n 3.解密结果:\n%@\n",_originStr,enBase64Str,deStr];
+                    NSString *logText = [NSString stringWithFormat:@"SecKey 秘钥 Base64->SecKeyRef \n 1.原始明文:\n%@\n 2.加密结果:\n%@\n 3.解密结果:\n%@\n",_originStr,enBase64Str,deStr];
                     
                     [self showText:logText];
                 }
             }
+            break;
+        }
+        case 2:{// 私钥加签->公钥验签(SHA256)
+            if (!_privateKeyRef) {
+                [self showText:@"请先操作 生成秘钥 REF->NSData"];
+            }else{
+                NSData *originData = [_originStr dataUsingEncoding:NSUTF8StringEncoding];
+                NSData *signedData = [RSAEncrypt signData:originData withKeyRef:_privateKeyRef];
+                NSString *signedDataBase64Str = [signedData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+                
+                BOOL very = [RSAEncrypt vertifyData:originData signature:signedData withKeyRef:_publicKeyRef];
+                NSString *verStr = @"失败";
+                if (very) {
+                    verStr = @"成功";
+                }
+                
+                NSString *logText = [NSString stringWithFormat:@"SecKey 私钥加签->公钥验签(SHA256) \n 1.原始明文:\n%@\n 2.加签结果:\n%@\n 3.验签结果:\n%@\n",_originStr,signedDataBase64Str,verStr];
+                [self showText:logText];
+            }
         }
             break;
-        case 5:{// 公钥加密->私钥解密
+        case 3:{// 公钥加密->私钥解密
             if(!_publicKeyRef){
                 [self showText:@"请先操作 生成秘钥 REF->NSData"];
             }else{
@@ -296,7 +338,7 @@
 - (void)showText:(NSString *)text{
     NSString *logText = [NSString stringWithFormat:@"%@\n%@\n",_textView.text,text];
     _textView.text = logText;
-    
+    NSLog(@"%@",logText);
     CGFloat offset = _textView.contentSize.height - _textView.bounds.size.height;
     if (offset > 0)
     {
@@ -338,6 +380,91 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     }
     
     return [[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES];
+}
+
+
+- (SecKeyRef)addPublicKey:(NSString *)key{
+    NSRange spos = [key rangeOfString:@"-----BEGIN PUBLIC KEY-----"];
+    NSRange epos = [key rangeOfString:@"-----END PUBLIC KEY-----"];
+    if(spos.location != NSNotFound && epos.location != NSNotFound){
+        NSUInteger s = spos.location + spos.length;
+        NSUInteger e = epos.location;
+        NSRange range = NSMakeRange(s, e-s);
+        key = [key substringWithRange:range];
+    }
+    key = [key stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    key = [key stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    key = [key stringByReplacingOccurrencesOfString:@"\t" withString:@""];
+    key = [key stringByReplacingOccurrencesOfString:@" "  withString:@""];
+    // This will be base64 encoded, decode it.
+    NSData *data = base64_decode(key);
+    data = [self stripPublicKeyHeader:data];
+    if(!data){
+        return nil;
+    }
+    //a tag to read/write keychain storage
+    NSString *tag = @"RSAUtil_PubKey";
+    NSData *d_tag = [NSData dataWithBytes:[tag UTF8String] length:[tag length]];
+    // Delete any old lingering key with the same tag
+    NSMutableDictionary *publicKey = [[NSMutableDictionary alloc] init];
+    [publicKey setObject:(__bridge id) kSecClassKey forKey:(__bridge id)kSecClass];
+    [publicKey setObject:(__bridge id) kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+    [publicKey setObject:d_tag forKey:(__bridge id)kSecAttrApplicationTag];
+    SecItemDelete((__bridge CFDictionaryRef)publicKey);
+    // Add persistent version of the key to system keychain
+    [publicKey setObject:data forKey:(__bridge id)kSecValueData];
+    [publicKey setObject:(__bridge id) kSecAttrKeyClassPublic forKey:(__bridge id)
+     kSecAttrKeyClass];
+    [publicKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)
+     kSecReturnPersistentRef];
+    CFTypeRef persistKey = nil;
+    OSStatus status = SecItemAdd((__bridge CFDictionaryRef)publicKey, &persistKey);
+    if (persistKey != nil){
+        CFRelease(persistKey);
+    }
+    if ((status != noErr) && (status != errSecDuplicateItem)) {
+        return nil;
+    }
+    [publicKey removeObjectForKey:(__bridge id)kSecValueData];
+    [publicKey removeObjectForKey:(__bridge id)kSecReturnPersistentRef];
+    [publicKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecReturnRef];
+    [publicKey setObject:(__bridge id) kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+    // Now fetch the SecKeyRef version of the key
+    SecKeyRef keyRef = nil;
+    status = SecItemCopyMatching((__bridge CFDictionaryRef)publicKey, (CFTypeRef *)&keyRef);
+    if(status != noErr){
+        return nil;
+    }
+    return keyRef;
+}
+
+- (NSData *)stripPublicKeyHeader:(NSData *)d_key{
+    // Skip ASN.1 public key header
+    if (d_key == nil) return(nil);
+    unsigned long len = [d_key length];
+    if (!len) return(nil);
+    unsigned char *c_key = (unsigned char *)[d_key bytes];
+    unsigned int  idx     = 0;
+    if (c_key[idx++] != 0x30) return(nil);
+    if (c_key[idx] > 0x80) idx += c_key[idx] - 0x80 + 1;
+    else idx++;
+    // PKCS #1 rsaEncryption szOID_RSA_RSA
+    static unsigned char seqiod[] =
+    { 0x30,   0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01,
+        0x01, 0x05, 0x00 };
+    if (memcmp(&c_key[idx], seqiod, 15)) return(nil);
+    idx += 15;
+    if (c_key[idx++] != 0x03) return(nil);
+    if (c_key[idx] > 0x80) idx += c_key[idx] - 0x80 + 1;
+    else idx++;
+    if (c_key[idx++] != '\0') return(nil);
+    // Now make a new NSData from this buffer
+    return ([NSData dataWithBytes:&c_key[idx] length:len - idx]);
+}
+
+static NSData *base64_decode(NSString *str){
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:str    options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return data;
 }
 
 @end

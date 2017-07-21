@@ -1,12 +1,63 @@
 PODS:
+  - DLKit (0.3.1):
+    - DLKit/Classes (= 0.3.1)
+  - DLKit/Classes (0.3.1):
+    - DLKit/Classes/Assist (= 0.3.1)
+    - DLKit/Classes/Base (= 0.3.1)
+  - DLKit/Classes/Assist (0.3.1):
+    - DLKit/Classes/Assist/DLLog (= 0.3.1)
+  - DLKit/Classes/Assist/DLLog (0.3.1):
+    - DLKit/Classes/Base/DLUIKitExtended/NSDate
+  - DLKit/Classes/Base (0.3.1):
+    - DLKit/Classes/Base/DLAppInfo (= 0.3.1)
+    - DLKit/Classes/Base/DLData (= 0.3.1)
+    - DLKit/Classes/Base/DLNet (= 0.3.1)
+    - DLKit/Classes/Base/DLPath (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended (= 0.3.1)
+    - DLKit/Classes/Base/Encrypt (= 0.3.1)
+    - DLKit/Classes/Base/Storage (= 0.3.1)
+  - DLKit/Classes/Base/DLAppInfo (0.3.1)
+  - DLKit/Classes/Base/DLData (0.3.1)
+  - DLKit/Classes/Base/DLNet (0.3.1):
+    - DLKit/Classes/Base/DLNet/DLDownloadFile (= 0.3.1)
+    - DLKit/Classes/Base/DLNet/DLHttp (= 0.3.1)
+  - DLKit/Classes/Base/DLNet/DLDownloadFile (0.3.1):
+    - DLKit/Classes/Base/DLUIKitExtended/NSURL
+  - DLKit/Classes/Base/DLNet/DLHttp (0.3.1)
+  - DLKit/Classes/Base/DLPath (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended (0.3.1):
+    - DLKit/Classes/Base/DLUIKitExtended/Device (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended/NSData (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended/NSDate (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended/NSObject (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended/NSString (= 0.3.1)
+    - DLKit/Classes/Base/DLUIKitExtended/NSURL (= 0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/Device (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/NSData (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/NSDate (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/NSObject (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/NSString (0.3.1)
+  - DLKit/Classes/Base/DLUIKitExtended/NSURL (0.3.1)
+  - DLKit/Classes/Base/Encrypt (0.3.1):
+    - DLKit/Classes/Base/Encrypt/AES128 (= 0.3.1)
+    - DLKit/Classes/Base/Encrypt/DESBase64 (= 0.3.1)
+  - DLKit/Classes/Base/Encrypt/AES128 (0.3.1):
+    - GTMBase64 (~> 1.0.0)
+  - DLKit/Classes/Base/Encrypt/DESBase64 (0.3.1):
+    - GTMBase64 (~> 1.0.0)
+  - DLKit/Classes/Base/Storage (0.3.1)
+  - GTMBase64 (1.0.0)
   - OpenSSL (1.0.210)
 
 DEPENDENCIES:
+  - DLKit (~> 0.3.1)
   - OpenSSL (~> 1.0.210)
 
 SPEC CHECKSUMS:
+  DLKit: 9de9b51bbb339fb655976f0332c35b1bd02a37a4
+  GTMBase64: 0da7372e95f5171f3f652db38cde6716f8eb5e24
   OpenSSL: 246ffb948e9d56466727fd318134af35f5aa764e
 
-PODFILE CHECKSUM: 802fa863069ae2bc4a5839accf3084a86fe202c1
+PODFILE CHECKSUM: e699c82db63ea114e4ff8d1d284239d202ff7980
 
 COCOAPODS: 1.1.1

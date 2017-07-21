@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DLKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMBase64.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RSAEncrypt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EC411C5F204C16BC5B42562B6E189748</key>
+		<key>329A34A3182DDFE6211A8E88E76F68EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E78C0139C82BABB0015CEC12B59D261C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9082B3E65CD4CCC8EF957E65F0E55E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

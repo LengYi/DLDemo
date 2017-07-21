@@ -27,6 +27,7 @@
     return NO;
 }
 
+// RSA->PEM
 + (NSString *)pemFormatPrivateKey:(RSA *)key{
     if (!key) {
         return nil;
@@ -59,6 +60,7 @@
     return [NSString stringWithUTF8String:bptr->data];
 }
 
+// PEM->Base64
 + (NSString *)base64EncodeFromPem:(NSString *)pemFormate{
     return [[pemFormate componentsSeparatedByString:@"-----"] objectAtIndex:2];
 }
@@ -136,6 +138,30 @@
     
 }
 
+//模指生成公钥
++ (RSA *)publicKeyFormMod:(NSData *)modData exp:(NSData *)expData {
+    NSString *mod = [self stringFromData:modData];
+    NSString *exp = [self stringFromData:expData];
+    RSA * rsa_pub = RSA_new();
+    
+    const char *N=[mod UTF8String] ;
+    const char *E=[exp UTF8String];
+    
+    if (!BN_hex2bn(&rsa_pub->n, N)) {
+        return nil;
+    }
+    
+    if (!BN_hex2bn(&rsa_pub->e, E)) {
+        return nil;
+    }
+    return rsa_pub;
+}
+
++ (NSString *)stringFromData:(NSData *)data {
+    return  [[[[data description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
+              stringByReplacingOccurrencesOfString: @">" withString: @""]
+             stringByReplacingOccurrencesOfString: @" " withString: @""];
+}
 #pragma mark --- 公钥加密->私钥解密
 + (NSData *)encryptWithPublicKey:(RSA *)publicKey plainData:(NSData *)plainData{
     if (!publicKey || !plainData || plainData.length == 0) {

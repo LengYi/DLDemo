@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define APPSTORE   1   // 0 : 直接使用私有方法,1 : 混淆私有方法
+#define APPSTORE   0   // 0 : 直接使用私有方法,1 : 混淆私有方法
 /**
     扫描iOS设备上所有已安装的 App,并获取App相关信息
     使用该类准备工作:

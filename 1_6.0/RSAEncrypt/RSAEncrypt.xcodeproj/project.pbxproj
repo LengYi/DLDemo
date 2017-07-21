@@ -14,9 +14,12 @@
 		58B8D2C01EE540400001F173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B8D2BE1EE540400001F173 /* Main.storyboard */; };
 		58B8D2C21EE540400001F173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B8D2C11EE540400001F173 /* Assets.xcassets */; };
 		58B8D2C51EE540400001F173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B8D2C31EE540400001F173 /* LaunchScreen.storyboard */; };
-		58B8D2CF1EE547E80001F173 /* RSAEncryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D2CE1EE547E80001F173 /* RSAEncryptManager.m */; };
 		58B8D2D21EE548230001F173 /* RSAEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D2D11EE548230001F173 /* RSAEncrypt.m */; };
 		58B8D3091EE6AC160001F173 /* RSAEncrypt+SecKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8D3081EE6AC160001F173 /* RSAEncrypt+SecKey.m */; };
+		58E0853C1F14C75700314EA7 /* private.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58E0853A1F14C75700314EA7 /* private.txt */; };
+		58E0853D1F14C75700314EA7 /* public.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58E0853B1F14C75700314EA7 /* public.txt */; };
+		58E085D91F16077000314EA7 /* private1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58E085D71F16077000314EA7 /* private1.txt */; };
+		58E085DA1F16077000314EA7 /* public1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58E085D81F16077000314EA7 /* public1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +33,15 @@
 		58B8D2C11EE540400001F173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58B8D2C41EE540400001F173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58B8D2C61EE540400001F173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58B8D2CD1EE547E80001F173 /* RSAEncryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptManager.h; sourceTree = "<group>"; };
-		58B8D2CE1EE547E80001F173 /* RSAEncryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptManager.m; sourceTree = "<group>"; };
 		58B8D2D01EE548230001F173 /* RSAEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncrypt.h; sourceTree = "<group>"; };
 		58B8D2D11EE548230001F173 /* RSAEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncrypt.m; sourceTree = "<group>"; };
 		58B8D3071EE6AC160001F173 /* RSAEncrypt+SecKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSAEncrypt+SecKey.h"; sourceTree = "<group>"; };
 		58B8D3081EE6AC160001F173 /* RSAEncrypt+SecKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSAEncrypt+SecKey.m"; sourceTree = "<group>"; };
+		58C540301F0F97B6009167DD /* RSAEncrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSAEncrypt.entitlements; sourceTree = "<group>"; };
+		58E0853A1F14C75700314EA7 /* private.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private.txt; sourceTree = "<group>"; };
+		58E0853B1F14C75700314EA7 /* public.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public.txt; sourceTree = "<group>"; };
+		58E085D71F16077000314EA7 /* private1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private1.txt; sourceTree = "<group>"; };
+		58E085D81F16077000314EA7 /* public1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public1.txt; sourceTree = "<group>"; };
 		9A57D4C0CB55D55FE3B23649 /* Pods-RSAEncrypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSAEncrypt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSAEncrypt/Pods-RSAEncrypt.debug.xcconfig"; sourceTree = "<group>"; };
 		B62C607FE40668C5A9A15298 /* Pods-RSAEncrypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSAEncrypt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSAEncrypt/Pods-RSAEncrypt.release.xcconfig"; sourceTree = "<group>"; };
 		E57EDACF213A6F42C55051EB /* libPods-RSAEncrypt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSAEncrypt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +71,10 @@
 		58B8D2A91EE540400001F173 = {
 			isa = PBXGroup;
 			children = (
+				58E085D71F16077000314EA7 /* private1.txt */,
+				58E085D81F16077000314EA7 /* public1.txt */,
+				58E0853A1F14C75700314EA7 /* private.txt */,
+				58E0853B1F14C75700314EA7 /* public.txt */,
 				58B8D2CC1EE547C60001F173 /* Classes */,
 				58B8D2B41EE540400001F173 /* RSAEncrypt */,
 				58B8D2B31EE540400001F173 /* Products */,
@@ -84,6 +94,7 @@
 		58B8D2B41EE540400001F173 /* RSAEncrypt */ = {
 			isa = PBXGroup;
 			children = (
+				58C540301F0F97B6009167DD /* RSAEncrypt.entitlements */,
 				58B8D2B81EE540400001F173 /* AppDelegate.h */,
 				58B8D2B91EE540400001F173 /* AppDelegate.m */,
 				58B8D2BB1EE540400001F173 /* ViewController.h */,
@@ -108,8 +119,6 @@
 		58B8D2CC1EE547C60001F173 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				58B8D2CD1EE547E80001F173 /* RSAEncryptManager.h */,
-				58B8D2CE1EE547E80001F173 /* RSAEncryptManager.m */,
 				58B8D2D01EE548230001F173 /* RSAEncrypt.h */,
 				58B8D2D11EE548230001F173 /* RSAEncrypt.m */,
 				58B8D3071EE6AC160001F173 /* RSAEncrypt+SecKey.h */,
@@ -160,8 +169,13 @@
 				TargetAttributes = {
 					58B8D2B11EE540400001F173 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UH63RWQD5Z;
+						DevelopmentTeam = 36HE5D7247;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -188,9 +202,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E085D91F16077000314EA7 /* private1.txt in Resources */,
+				58E0853C1F14C75700314EA7 /* private.txt in Resources */,
+				58E085DA1F16077000314EA7 /* public1.txt in Resources */,
 				58B8D2C51EE540400001F173 /* LaunchScreen.storyboard in Resources */,
 				58B8D2C21EE540400001F173 /* Assets.xcassets in Resources */,
 				58B8D2C01EE540400001F173 /* Main.storyboard in Resources */,
+				58E0853D1F14C75700314EA7 /* public.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B8D2CF1EE547E80001F173 /* RSAEncryptManager.m in Sources */,
 				58B8D2BD1EE540400001F173 /* ViewController.m in Sources */,
 				58B8D3091EE6AC160001F173 /* RSAEncrypt+SecKey.m in Sources */,
 				58B8D2D21EE548230001F173 /* RSAEncrypt.m in Sources */,
@@ -377,12 +394,13 @@
 			baseConfigurationReference = 9A57D4C0CB55D55FE3B23649 /* Pods-RSAEncrypt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UH63RWQD5Z;
+				CODE_SIGN_ENTITLEMENTS = RSAEncrypt/RSAEncrypt.entitlements;
+				DEVELOPMENT_TEAM = 36HE5D7247;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RSAEncrypt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ice112;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -392,12 +410,13 @@
 			baseConfigurationReference = B62C607FE40668C5A9A15298 /* Pods-RSAEncrypt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UH63RWQD5Z;
+				CODE_SIGN_ENTITLEMENTS = RSAEncrypt/RSAEncrypt.entitlements;
+				DEVELOPMENT_TEAM = 36HE5D7247;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RSAEncrypt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ice112;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
