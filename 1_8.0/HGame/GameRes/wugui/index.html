@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="MobileOptimized" content="640">
+	<meta name="HandheldFriendly" content="true">
+        <meta charset="utf-8"/>
+	<!-- Set the title bar of the page -->
+        <title>River Dash</title>
+
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+              background: #000000;
+              color:#cccccc;
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            canvas {
+                      image-rendering: optimizeSpeed;
+                      -webkit-interpolation-mode: nearest-neighbor;
+                      -ms-touch-action: none;
+                      margin: 0px;
+                      padding: 0px;
+                      border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                 width: 100%;
+                 height: 100%;
+            }
+            div.gm4html5_div_class
+            {
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            /* START - Login Dialog Box */
+            div.gm4html5_login
+            {
+                 padding: 20px;
+                 position: absolute;
+                 border: solid 2px #000000;
+                 background-color: #404040;
+                 color:#00ff00;
+                 border-radius: 15px;
+                 box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button
+            {
+                 float: right;
+            }
+            div.gm4html5_login_button
+            {
+                 float: left;
+            }
+            div.gm4html5_login_header
+            {
+                 text-align: center;
+            }
+            /* END - Login Dialog Box */
+            :-webkit-full-screen {
+               width: 100%;
+               height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+<div class="gm4html5_div_class" id="gm4html5_div_id">
+        <img src="game/splash.png" id="GM4HTML5_loadingscreen" alt="Loading... Please wait" style="display:block; position:absolute; left:0px; top:0px;"/>
+<img src="game/loadbar.png" id="loadbar" style="display:none; position:absolute; left:69px; top:722px;"/>
+<img src="game/water.png" id="water" style="display:none; position:absolute; left:-20px; top:816px;"/>
+<canvas id="canvas" width="640" height="976">
+               <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+        </div>
+<script type="text/javascript">
+			loadbarobj = document.getElementById("loadbar");
+			waterobj = document.getElementById("water");
+			bar_img_w = 478;
+			bar_img_h = 419;
+			bar_img_x = 93;
+			bar_img_y = 277;
+			water_img_h=180;
+			water_img_w=680;
+			water_img_x=-20;
+			water_img_y=815;
+                        var loadimgobj = document.getElementById("GM4HTML5_loadingscreen");
+			var room_width  = 640;
+			var room_height = 976;
+			var ratio = (room_height/room_width);
+			if (typeof(window.innerWidth)=='number') {
+				browser_width = window.innerWidth;
+				browser_height = window.innerHeight;
+			} else if (document.documentElement&&document.documentElement.clientWidth) {
+				browser_width = document.documentElement.clientWidth;
+				browser_height = document.documentElement.clientHeight;
+			} else if (document.body&&document.body.clientWidth) {
+				browser_width = document.body.clientWidth;
+				browser_height = document.body.clientHeight;
+			}
+			var multi = (browser_height / room_height);
+			var new_width = (room_width * multi);
+			var new_height = browser_height;
+			if (new_width > browser_width) {
+				multi = (browser_width / room_width);
+				new_width = (room_width * multi);
+				new_height = (room_height * multi);
+			}
+			loadimgobj.style.width = new_width+'px';
+			loadimgobj.style.height = new_height+'px';
+			loadimgobj.style.left = browser_width/2-new_width/2+"px";
+			loadimgobj.style.top = browser_height/2-new_height/2+"px";
+function hideAddressBar()
+{
+    if(!window.location.hash)
+    {
+        if(document.height < window.outerHeight)
+        {
+            document.body.style.height = (window.outerHeight + 50) + 'px';
+        }
+
+        setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+    }
+}
+
+window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+window.addEventListener("orientationchange", hideAddressBar );
+		</script>
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="game/game.js?WRRAC=634174683"></script>
+<script type="text/javascript">
+
+      window.addEventListener("touchstart", ios_unlock_sound, false);
+
+      function ios_unlock_sound(event) {
+       var buffer = g_WebAudioContext.createBuffer(1, 1, 22050);
+       var source = g_WebAudioContext.createBufferSource();
+       source.buffer = buffer;
+       source.connect(g_WebAudioContext.destination);
+       source.noteOn(0);
+       window.removeEventListener("touchstart", ios_unlock_sound, false);
+      }</script>
+    </body>
+</html>

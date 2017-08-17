@@ -1,0 +1,26 @@
+PODS:
+  - DLKit/Classes/Base/DLNet/DLHttp (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended (0.3.4):
+    - DLKit/Classes/Base/DLUIKitExtended/Device (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSData (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSDate (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSObject (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSString (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSURL (= 0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/Device (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSData (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSDate (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSObject (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSString (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSURL (0.3.4)
+
+DEPENDENCIES:
+  - DLKit/Classes/Base/DLNet/DLHttp (~> 0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended (~> 0.3.4)
+
+SPEC CHECKSUMS:
+  DLKit: 353455ad470d70c458d8323e7a7fb803805de02d
+
+PODFILE CHECKSUM: 1993978a072d187ee0146fca0057308b53fba092
+
+COCOAPODS: 1.1.1

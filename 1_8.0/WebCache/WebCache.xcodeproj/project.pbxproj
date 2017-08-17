@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34FF05E4776BD960975F8867 /* libPods-WebCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B23E94F4A7C8ED59D97E9BFB /* libPods-WebCache.a */; };
+		584D651A1F442AF2005C43CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D65191F442AF2005C43CC /* main.m */; };
+		584D651D1F442AF2005C43CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D651C1F442AF2005C43CC /* AppDelegate.m */; };
+		584D65201F442AF2005C43CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D651F1F442AF2005C43CC /* ViewController.m */; };
+		584D65231F442AF2005C43CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584D65211F442AF2005C43CC /* Main.storyboard */; };
+		584D65251F442AF2005C43CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584D65241F442AF2005C43CC /* Assets.xcassets */; };
+		584D65281F442AF2005C43CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584D65261F442AF2005C43CC /* LaunchScreen.storyboard */; };
+		584D65331F442AF2005C43CC /* WebCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D65321F442AF2005C43CC /* WebCacheTests.m */; };
+		584D653E1F442AF2005C43CC /* WebCacheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D653D1F442AF2005C43CC /* WebCacheUITests.m */; };
+		584D65721F442CC8005C43CC /* WebUrlProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D65711F442CC8005C43CC /* WebUrlProtocol.m */; };
+		584D65751F44413E005C43CC /* CacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D65741F44413E005C43CC /* CacheModel.m */; };
+		584D65781F4443CB005C43CC /* HtmlCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D65771F4443CB005C43CC /* HtmlCacheManager.m */; };
+		584D657B1F444753005C43CC /* NSURLRequest+Workaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D657A1F444753005C43CC /* NSURLRequest+Workaround.m */; };
+		584D657E1F444B18005C43CC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 584D657D1F444B18005C43CC /* Reachability.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		584D652F1F442AF2005C43CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 584D650D1F442AF2005C43CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 584D65141F442AF2005C43CC;
+			remoteInfo = WebCache;
+		};
+		584D653A1F442AF2005C43CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 584D650D1F442AF2005C43CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 584D65141F442AF2005C43CC;
+			remoteInfo = WebCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		584D65151F442AF2005C43CC /* WebCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		584D65191F442AF2005C43CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		584D651B1F442AF2005C43CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		584D651C1F442AF2005C43CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		584D651E1F442AF2005C43CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		584D651F1F442AF2005C43CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		584D65221F442AF2005C43CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		584D65241F442AF2005C43CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		584D65271F442AF2005C43CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		584D65291F442AF2005C43CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584D652E1F442AF2005C43CC /* WebCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		584D65321F442AF2005C43CC /* WebCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheTests.m; sourceTree = "<group>"; };
+		584D65341F442AF2005C43CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584D65391F442AF2005C43CC /* WebCacheUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebCacheUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		584D653D1F442AF2005C43CC /* WebCacheUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheUITests.m; sourceTree = "<group>"; };
+		584D653F1F442AF2005C43CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584D65701F442CC8005C43CC /* WebUrlProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUrlProtocol.h; sourceTree = "<group>"; };
+		584D65711F442CC8005C43CC /* WebUrlProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebUrlProtocol.m; sourceTree = "<group>"; };
+		584D65731F44413E005C43CC /* CacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheModel.h; sourceTree = "<group>"; };
+		584D65741F44413E005C43CC /* CacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheModel.m; sourceTree = "<group>"; };
+		584D65761F4443CB005C43CC /* HtmlCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlCacheManager.h; sourceTree = "<group>"; };
+		584D65771F4443CB005C43CC /* HtmlCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlCacheManager.m; sourceTree = "<group>"; };
+		584D65791F444753005C43CC /* NSURLRequest+Workaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Workaround.h"; sourceTree = "<group>"; };
+		584D657A1F444753005C43CC /* NSURLRequest+Workaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Workaround.m"; sourceTree = "<group>"; };
+		584D657C1F444B18005C43CC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		584D657D1F444B18005C43CC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5B2AD55640044ADA253DF2CA /* Pods-WebCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebCache/Pods-WebCache.debug.xcconfig"; sourceTree = "<group>"; };
+		B23E94F4A7C8ED59D97E9BFB /* libPods-WebCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8AC6F4AB5267BD8EF38EFCF /* Pods-WebCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebCache/Pods-WebCache.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		584D65121F442AF2005C43CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34FF05E4776BD960975F8867 /* libPods-WebCache.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D652B1F442AF2005C43CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D65361F442AF2005C43CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		584D650C1F442AF2005C43CC = {
+			isa = PBXGroup;
+			children = (
+				584D654B1F442B48005C43CC /* Classes */,
+				584D65171F442AF2005C43CC /* WebCache */,
+				584D65311F442AF2005C43CC /* WebCacheTests */,
+				584D653C1F442AF2005C43CC /* WebCacheUITests */,
+				584D65161F442AF2005C43CC /* Products */,
+				73C9C9BDDF9A0B14A7561046 /* Pods */,
+				72C35DC5282D350D08D5B365 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		584D65161F442AF2005C43CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				584D65151F442AF2005C43CC /* WebCache.app */,
+				584D652E1F442AF2005C43CC /* WebCacheTests.xctest */,
+				584D65391F442AF2005C43CC /* WebCacheUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		584D65171F442AF2005C43CC /* WebCache */ = {
+			isa = PBXGroup;
+			children = (
+				584D651B1F442AF2005C43CC /* AppDelegate.h */,
+				584D651C1F442AF2005C43CC /* AppDelegate.m */,
+				584D651E1F442AF2005C43CC /* ViewController.h */,
+				584D651F1F442AF2005C43CC /* ViewController.m */,
+				584D65211F442AF2005C43CC /* Main.storyboard */,
+				584D65241F442AF2005C43CC /* Assets.xcassets */,
+				584D65261F442AF2005C43CC /* LaunchScreen.storyboard */,
+				584D65291F442AF2005C43CC /* Info.plist */,
+				584D65181F442AF2005C43CC /* Supporting Files */,
+			);
+			path = WebCache;
+			sourceTree = "<group>";
+		};
+		584D65181F442AF2005C43CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				584D65191F442AF2005C43CC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		584D65311F442AF2005C43CC /* WebCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				584D65321F442AF2005C43CC /* WebCacheTests.m */,
+				584D65341F442AF2005C43CC /* Info.plist */,
+			);
+			path = WebCacheTests;
+			sourceTree = "<group>";
+		};
+		584D653C1F442AF2005C43CC /* WebCacheUITests */ = {
+			isa = PBXGroup;
+			children = (
+				584D653D1F442AF2005C43CC /* WebCacheUITests.m */,
+				584D653F1F442AF2005C43CC /* Info.plist */,
+			);
+			path = WebCacheUITests;
+			sourceTree = "<group>";
+		};
+		584D654B1F442B48005C43CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				584D657C1F444B18005C43CC /* Reachability.h */,
+				584D657D1F444B18005C43CC /* Reachability.m */,
+				584D65701F442CC8005C43CC /* WebUrlProtocol.h */,
+				584D65711F442CC8005C43CC /* WebUrlProtocol.m */,
+				584D65731F44413E005C43CC /* CacheModel.h */,
+				584D65741F44413E005C43CC /* CacheModel.m */,
+				584D65761F4443CB005C43CC /* HtmlCacheManager.h */,
+				584D65771F4443CB005C43CC /* HtmlCacheManager.m */,
+				584D65791F444753005C43CC /* NSURLRequest+Workaround.h */,
+				584D657A1F444753005C43CC /* NSURLRequest+Workaround.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		72C35DC5282D350D08D5B365 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B23E94F4A7C8ED59D97E9BFB /* libPods-WebCache.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73C9C9BDDF9A0B14A7561046 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AD55640044ADA253DF2CA /* Pods-WebCache.debug.xcconfig */,
+				E8AC6F4AB5267BD8EF38EFCF /* Pods-WebCache.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		584D65141F442AF2005C43CC /* WebCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584D65421F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCache" */;
+			buildPhases = (
+				3EF1DCA3F673CD7DAE80304A /* [CP] Check Pods Manifest.lock */,
+				584D65111F442AF2005C43CC /* Sources */,
+				584D65121F442AF2005C43CC /* Frameworks */,
+				584D65131F442AF2005C43CC /* Resources */,
+				525F23DD4F9B16706B39F9B9 /* [CP] Embed Pods Frameworks */,
+				8A5BB855765A5C6D9B2BA60C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebCache;
+			productName = WebCache;
+			productReference = 584D65151F442AF2005C43CC /* WebCache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		584D652D1F442AF2005C43CC /* WebCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584D65451F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCacheTests" */;
+			buildPhases = (
+				584D652A1F442AF2005C43CC /* Sources */,
+				584D652B1F442AF2005C43CC /* Frameworks */,
+				584D652C1F442AF2005C43CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				584D65301F442AF2005C43CC /* PBXTargetDependency */,
+			);
+			name = WebCacheTests;
+			productName = WebCacheTests;
+			productReference = 584D652E1F442AF2005C43CC /* WebCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		584D65381F442AF2005C43CC /* WebCacheUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584D65481F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCacheUITests" */;
+			buildPhases = (
+				584D65351F442AF2005C43CC /* Sources */,
+				584D65361F442AF2005C43CC /* Frameworks */,
+				584D65371F442AF2005C43CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				584D653B1F442AF2005C43CC /* PBXTargetDependency */,
+			);
+			name = WebCacheUITests;
+			productName = WebCacheUITests;
+			productReference = 584D65391F442AF2005C43CC /* WebCacheUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		584D650D1F442AF2005C43CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ice;
+				TargetAttributes = {
+					584D65141F442AF2005C43CC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 36HE5D7247;
+						ProvisioningStyle = Automatic;
+					};
+					584D652D1F442AF2005C43CC = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 584D65141F442AF2005C43CC;
+					};
+					584D65381F442AF2005C43CC = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 584D65141F442AF2005C43CC;
+					};
+				};
+			};
+			buildConfigurationList = 584D65101F442AF2005C43CC /* Build configuration list for PBXProject "WebCache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 584D650C1F442AF2005C43CC;
+			productRefGroup = 584D65161F442AF2005C43CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				584D65141F442AF2005C43CC /* WebCache */,
+				584D652D1F442AF2005C43CC /* WebCacheTests */,
+				584D65381F442AF2005C43CC /* WebCacheUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		584D65131F442AF2005C43CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584D65281F442AF2005C43CC /* LaunchScreen.storyboard in Resources */,
+				584D65251F442AF2005C43CC /* Assets.xcassets in Resources */,
+				584D65231F442AF2005C43CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D652C1F442AF2005C43CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D65371F442AF2005C43CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EF1DCA3F673CD7DAE80304A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		525F23DD4F9B16706B39F9B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebCache/Pods-WebCache-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A5BB855765A5C6D9B2BA60C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebCache/Pods-WebCache-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		584D65111F442AF2005C43CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584D65201F442AF2005C43CC /* ViewController.m in Sources */,
+				584D65751F44413E005C43CC /* CacheModel.m in Sources */,
+				584D657E1F444B18005C43CC /* Reachability.m in Sources */,
+				584D657B1F444753005C43CC /* NSURLRequest+Workaround.m in Sources */,
+				584D651D1F442AF2005C43CC /* AppDelegate.m in Sources */,
+				584D65781F4443CB005C43CC /* HtmlCacheManager.m in Sources */,
+				584D65721F442CC8005C43CC /* WebUrlProtocol.m in Sources */,
+				584D651A1F442AF2005C43CC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D652A1F442AF2005C43CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584D65331F442AF2005C43CC /* WebCacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584D65351F442AF2005C43CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584D653E1F442AF2005C43CC /* WebCacheUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		584D65301F442AF2005C43CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 584D65141F442AF2005C43CC /* WebCache */;
+			targetProxy = 584D652F1F442AF2005C43CC /* PBXContainerItemProxy */;
+		};
+		584D653B1F442AF2005C43CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 584D65141F442AF2005C43CC /* WebCache */;
+			targetProxy = 584D653A1F442AF2005C43CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		584D65211F442AF2005C43CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				584D65221F442AF2005C43CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		584D65261F442AF2005C43CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				584D65271F442AF2005C43CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		584D65401F442AF2005C43CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		584D65411F442AF2005C43CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		584D65431F442AF2005C43CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AD55640044ADA253DF2CA /* Pods-WebCache.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36HE5D7247;
+				INFOPLIST_FILE = WebCache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		584D65441F442AF2005C43CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AC6F4AB5267BD8EF38EFCF /* Pods-WebCache.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36HE5D7247;
+				INFOPLIST_FILE = WebCache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		584D65461F442AF2005C43CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.WebCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebCache.app/WebCache";
+			};
+			name = Debug;
+		};
+		584D65471F442AF2005C43CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.WebCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebCache.app/WebCache";
+			};
+			name = Release;
+		};
+		584D65491F442AF2005C43CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebCacheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.WebCacheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebCache;
+			};
+			name = Debug;
+		};
+		584D654A1F442AF2005C43CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebCacheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.WebCacheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebCache;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		584D65101F442AF2005C43CC /* Build configuration list for PBXProject "WebCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584D65401F442AF2005C43CC /* Debug */,
+				584D65411F442AF2005C43CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584D65421F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584D65431F442AF2005C43CC /* Debug */,
+				584D65441F442AF2005C43CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584D65451F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584D65461F442AF2005C43CC /* Debug */,
+				584D65471F442AF2005C43CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584D65481F442AF2005C43CC /* Build configuration list for PBXNativeTarget "WebCacheUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584D65491F442AF2005C43CC /* Debug */,
+				584D654A1F442AF2005C43CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 584D650D1F442AF2005C43CC /* Project object */;
+}

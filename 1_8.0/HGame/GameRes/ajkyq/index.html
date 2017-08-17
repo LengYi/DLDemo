@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.zzfriend.com/demo/youxi/m/ajkyq/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>爱就块一起吧</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+
+    <script src="./jquery.min.js"></script>
+    <script src="./jweixin-1.0.0.js"></script>
+    <script src="./ctl_utils.js"></script>
+    <script src="../js/HSJsBridge.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        haveShare=1;
+        haveGamelist=0;
+        resourceCDN = '';
+        var myScore =0;
+        function cb_start(){
+            console.log("cb_start");
+        }
+        function cb_gameover(score){
+            console.log("cb_gameover"+score);
+        }
+        function cb_finishload(){
+            console.log("cb_finishload");
+        }
+        function cb_restart(){
+            console.log("cb_restart");
+        }
+        function cb_share(){
+        	// play68_submitScore(myScore);
+            console.log("cb_share");
+        }
+        function cb_more(){
+            console.log("cb_more");
+       }
+    </script>
+</head>
+<body style="padding: 0px; border-width: 0px; border-style: initial; border-color: initial; margin: 0px;">
+<div style="position: relative; width: 340.705px; height: 606px; top: 0px;" id="gameDiv">
+    <canvas id="egretCanvas" width="640" height="1138" style="width: 340.705px; height: 606px;"></canvas>
+</div>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="./egret_require.js"></script>
+<script src="./egret_loader.js"></script>
+<script src="./game-min.js"></script>
+<script src="./hui10share.js"></script>
+<script src="./gameResult.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+        function start(){
+            restartGame();
+        }
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+
+
+<script type="text/JavaScript">
+window.shareData={
+  'title':'爱就块一起吧',
+  'link':'http://www.zzfriend.com/demo/youxi/m/ajkyq/',
+  'imgurl':'http://www.zzfriend.com/demo/youxi/m/ajkyq/icon.png'
+}
+window.shareFriendData={
+  'title':'爱就块一起吧',
+  'content':'关注微赢网络,更多好玩的游戏等着你。',
+  'link':'http://www.zzfriend.com/demo/youxi/m/ajkyq/',
+  'imgurl':'http://www.zzfriend.com/demo/youxi/m/ajkyq/icon.png'
+}
+</script>
+
+</body></html>

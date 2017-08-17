@@ -1,0 +1,7 @@
+source 'https://github.com/LengYi/SpecRepo.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Cache' do
+pod 'DLKit/Classes/Base/DLUIKitExtended', '~> 0.3.4'
+pod 'DLKit/Classes/Base/DLNet/DLHttp', '~> 0.3.4'
+end

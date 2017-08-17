@@ -1,0 +1,32 @@
+PODS:
+  - DLKit/Classes/Base/DLNet/DLHttp (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended (0.3.4):
+    - DLKit/Classes/Base/DLUIKitExtended/Device (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSData (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSDate (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSObject (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSString (= 0.3.4)
+    - DLKit/Classes/Base/DLUIKitExtended/NSURL (= 0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/Device (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSData (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSDate (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSObject (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSString (0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended/NSURL (0.3.4)
+  - MJExtension (3.0.13)
+  - YYCache (1.0.4)
+
+DEPENDENCIES:
+  - DLKit/Classes/Base/DLNet/DLHttp (~> 0.3.4)
+  - DLKit/Classes/Base/DLUIKitExtended (~> 0.3.4)
+  - MJExtension
+  - YYCache
+
+SPEC CHECKSUMS:
+  DLKit: 353455ad470d70c458d8323e7a7fb803805de02d
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+
+PODFILE CHECKSUM: 7de52ff4c3fbd4edadb9711617fb258bb9392286
+
+COCOAPODS: 1.1.1
