@@ -9,6 +9,7 @@
 #import "UIApplication+Extern.h"
 #import "LSApplicationProxy.h"
 #import "LSApplicationWorkspace.h"
+#import "LSPlugInKitProxy.h"
 
 @implementation UIApplication (Extern)
 
@@ -30,12 +31,25 @@
     id apps = [ws allInstalledApplications];
 #endif
 
+    // ios 11 使用以下方法获取安装列表,但是只能获取到部分已安装(APP 内含有插件eg:自定义键盘,appleWatch等)
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11) {
+        apps = [[NSMutableArray alloc] init];
+        // 获取含有插件的app信息
+        NSArray *pluginsArr = [ws installedPlugins];
+        for (int i = 0; i < pluginsArr.count; i++) {
+            LSPlugInKitProxy *installedPlugin = pluginsArr[i];
+            id bundle = [installedPlugin containingBundle];
+            if (bundle) {
+                [apps addObject:bundle];
+            }
+        }
+    }
     if ([apps isKindOfClass:[NSArray class]]) {
         NSArray *applist = (NSArray *)apps;
         if (applist.count > 0) {
             for (LSApplicationProxy *appProxy in applist) {
-                id o = [appProxy installProgress];
-                BOOL s = [appProxy isPlaceholder];
+                //id o = [appProxy installProgress];
+                //BOOL s = [appProxy isPlaceholder];
                 NSArray *array = [self getAppInfoWithProxy:appProxy];
                 if (array.count >= 2) {
                     [appProxyDict setObject:array[1] forKey:array[0]];

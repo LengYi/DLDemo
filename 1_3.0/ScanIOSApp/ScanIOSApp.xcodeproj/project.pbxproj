@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58A008381F750C8900496F2E /* LSPlugInKitProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPlugInKitProxy.h; sourceTree = "<group>"; };
 		58DFDF801E7BC25A00D09792 /* ScanIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DFDF841E7BC25A00D09792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58DFDF861E7BC25A00D09792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 				58DFDF9F1E7BC30500D09792 /* LSApplicationWorkspace.h */,
 				58DFDFA01E7BC30500D09792 /* LSBundleProxy.h */,
 				58DFDFA11E7BC30500D09792 /* LSResourceProxy.h */,
+				58A008381F750C8900496F2E /* LSPlugInKitProxy.h */,
 			);
 			path = LSApp;
 			sourceTree = "<group>";
@@ -169,7 +171,7 @@
 				TargetAttributes = {
 					58DFDF7F1E7BC25A00D09792 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UH63RWQD5Z;
+						DevelopmentTeam = 36HE5D7247;
 						ProvisioningStyle = Automatic;
 					};
 					58DFDFE21E7BE0FA00D09792 = {
@@ -355,7 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UH63RWQD5Z;
+				DEVELOPMENT_TEAM = 36HE5D7247;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -363,7 +365,7 @@
 				INFOPLIST_FILE = ScanIOSApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ice111;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -372,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UH63RWQD5Z;
+				DEVELOPMENT_TEAM = 36HE5D7247;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -380,7 +382,7 @@
 				INFOPLIST_FILE = ScanIOSApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ice111;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pa.yy.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
