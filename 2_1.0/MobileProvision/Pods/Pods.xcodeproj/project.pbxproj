@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27376BB7D8669C96E4572F83D46A4D2E /* OpenSSL-lib-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9211E9940C479002F6D5D7BFD4294 /* OpenSSL-lib-iOS-dummy.m */; };
+		6213792A58208B7DC5EB6ED1391C781E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		68D2C47637C286AE7BFE191A8E21C416 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B9ED515573B7A898CDA3855BDA4CE /* ReplaceMe.m */; };
+		72331EA4D1BED8D3D3D384ECB32E9D57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		993A1772BF34BF47D60F248BC969416C /* Pods-MobileProvision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CD90FA885BFB7592918F8646EB4B4A /* Pods-MobileProvision-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A31259661BB320539DE5BADC89E4ED0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F666B1C7A681CE68D279E561E2A07F;
+			remoteInfo = "OpenSSL-lib-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02CD90FA885BFB7592918F8646EB4B4A /* Pods-MobileProvision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileProvision-dummy.m"; sourceTree = "<group>"; };
+		117B9ED515573B7A898CDA3855BDA4CE /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = "OpenSSL-lib-iOS/Classes/ReplaceMe.m"; sourceTree = "<group>"; };
+		2233127BFD50FB0EC7BAFCCF967360DD /* libPods-MobileProvision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MobileProvision.a"; path = "libPods-MobileProvision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0D7EDCA5166A893FEBD45858D54335 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = "OpenSSL-lib-iOS/Vendors/openssl.framework"; sourceTree = "<group>"; };
+		5DB9211E9940C479002F6D5D7BFD4294 /* OpenSSL-lib-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenSSL-lib-iOS-dummy.m"; sourceTree = "<group>"; };
+		5DC7B6254075E23416D628730E7F7CB2 /* Pods-MobileProvision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileProvision.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C0407EE9EE2F27D5B5D12AB2A598068 /* libOpenSSL-lib-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libOpenSSL-lib-iOS.a"; path = "libOpenSSL-lib-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C155F422A4ADC3518D86DB3EBF14ACE /* OpenSSL-lib-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenSSL-lib-iOS-prefix.pch"; sourceTree = "<group>"; };
+		710C7BB1ACD07B188000481792F27C5D /* Pods-MobileProvision-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileProvision-resources.sh"; sourceTree = "<group>"; };
+		7254D47CF9D09E8AFEE39D51BEFCEBE7 /* Pods-MobileProvision-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileProvision-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A280E9A2A2252168C5208E57454CE848 /* OpenSSL-lib-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-lib-iOS.xcconfig"; sourceTree = "<group>"; };
+		A4A881E0488D46162EE5D5705B89E8E7 /* Pods-MobileProvision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileProvision.debug.xcconfig"; sourceTree = "<group>"; };
+		A6692030C07EBFDB05C6FF994FB26BD1 /* Pods-MobileProvision-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileProvision-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE28F897238984DCCC530B758331A21F /* Pods-MobileProvision-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileProvision-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89F87777BFA14F047725B14FB841BC37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6213792A58208B7DC5EB6ED1391C781E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D097AF3D4D77EC20DDCF592BEB6F7D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72331EA4D1BED8D3D3D384ECB32E9D57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01A47F5907BB340EFA1FD504CBEDC466 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CD8E7E2C6D691D69E17F0B859941CC8 /* OpenSSL-lib-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		123CA03FE1C11BCA4D82CAD9A1C51597 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB1A1A0D1AE2A7DD89E3DADC2FB9C259 /* Pods-MobileProvision */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2D3345E6B977AC5694FAD917F4477AA5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A280E9A2A2252168C5208E57454CE848 /* OpenSSL-lib-iOS.xcconfig */,
+				5DB9211E9940C479002F6D5D7BFD4294 /* OpenSSL-lib-iOS-dummy.m */,
+				6C155F422A4ADC3518D86DB3EBF14ACE /* OpenSSL-lib-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OpenSSL-lib-iOS";
+			sourceTree = "<group>";
+		};
+		3CD8E7E2C6D691D69E17F0B859941CC8 /* OpenSSL-lib-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				117B9ED515573B7A898CDA3855BDA4CE /* ReplaceMe.m */,
+				F1B23249C6E80C3215ED1C6C220CE8A9 /* Frameworks */,
+				2D3345E6B977AC5694FAD917F4477AA5 /* Support Files */,
+			);
+			name = "OpenSSL-lib-iOS";
+			path = "OpenSSL-lib-iOS";
+			sourceTree = "<group>";
+		};
+		684134A5D01F9C23A0D8BD9FA9971AAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C0407EE9EE2F27D5B5D12AB2A598068 /* libOpenSSL-lib-iOS.a */,
+				2233127BFD50FB0EC7BAFCCF967360DD /* libPods-MobileProvision.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				01A47F5907BB340EFA1FD504CBEDC466 /* Pods */,
+				684134A5D01F9C23A0D8BD9FA9971AAA /* Products */,
+				123CA03FE1C11BCA4D82CAD9A1C51597 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB1A1A0D1AE2A7DD89E3DADC2FB9C259 /* Pods-MobileProvision */ = {
+			isa = PBXGroup;
+			children = (
+				A6692030C07EBFDB05C6FF994FB26BD1 /* Pods-MobileProvision-acknowledgements.markdown */,
+				FE28F897238984DCCC530B758331A21F /* Pods-MobileProvision-acknowledgements.plist */,
+				02CD90FA885BFB7592918F8646EB4B4A /* Pods-MobileProvision-dummy.m */,
+				7254D47CF9D09E8AFEE39D51BEFCEBE7 /* Pods-MobileProvision-frameworks.sh */,
+				710C7BB1ACD07B188000481792F27C5D /* Pods-MobileProvision-resources.sh */,
+				A4A881E0488D46162EE5D5705B89E8E7 /* Pods-MobileProvision.debug.xcconfig */,
+				5DC7B6254075E23416D628730E7F7CB2 /* Pods-MobileProvision.release.xcconfig */,
+			);
+			name = "Pods-MobileProvision";
+			path = "Target Support Files/Pods-MobileProvision";
+			sourceTree = "<group>";
+		};
+		F1B23249C6E80C3215ED1C6C220CE8A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0D7EDCA5166A893FEBD45858D54335 /* openssl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04F666B1C7A681CE68D279E561E2A07F /* OpenSSL-lib-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94017B0E40401B42137E8054618EF248 /* Build configuration list for PBXNativeTarget "OpenSSL-lib-iOS" */;
+			buildPhases = (
+				EBB6DD4877C0C0E1E868A09E9564FACB /* Sources */,
+				D097AF3D4D77EC20DDCF592BEB6F7D60 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenSSL-lib-iOS";
+			productName = "OpenSSL-lib-iOS";
+			productReference = 6C0407EE9EE2F27D5B5D12AB2A598068 /* libOpenSSL-lib-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B78065D6DAA1F20CF7F320AED58E2F3 /* Pods-MobileProvision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF4A6F2B7FDA96E3376998D2E871A735 /* Build configuration list for PBXNativeTarget "Pods-MobileProvision" */;
+			buildPhases = (
+				99525CD66FA6DF44F7CC7928D6F87622 /* Sources */,
+				89F87777BFA14F047725B14FB841BC37 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B1BA51A95EB193202FC413680AFB835 /* PBXTargetDependency */,
+			);
+			name = "Pods-MobileProvision";
+			productName = "Pods-MobileProvision";
+			productReference = 2233127BFD50FB0EC7BAFCCF967360DD /* libPods-MobileProvision.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 684134A5D01F9C23A0D8BD9FA9971AAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04F666B1C7A681CE68D279E561E2A07F /* OpenSSL-lib-iOS */,
+				9B78065D6DAA1F20CF7F320AED58E2F3 /* Pods-MobileProvision */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99525CD66FA6DF44F7CC7928D6F87622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993A1772BF34BF47D60F248BC969416C /* Pods-MobileProvision-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB6DD4877C0C0E1E868A09E9564FACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27376BB7D8669C96E4572F83D46A4D2E /* OpenSSL-lib-iOS-dummy.m in Sources */,
+				68D2C47637C286AE7BFE191A8E21C416 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B1BA51A95EB193202FC413680AFB835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-lib-iOS";
+			target = 04F666B1C7A681CE68D279E561E2A07F /* OpenSSL-lib-iOS */;
+			targetProxy = 6A31259661BB320539DE5BADC89E4ED0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DAA8A1A01F252ED3E54961101C1E939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A280E9A2A2252168C5208E57454CE848 /* OpenSSL-lib-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OpenSSL-lib-iOS/OpenSSL-lib-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		300B66538DB7737CC076C68C9DB9BA6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A280E9A2A2252168C5208E57454CE848 /* OpenSSL-lib-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OpenSSL-lib-iOS/OpenSSL-lib-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58217891F66B0B54E23315E28756681B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A881E0488D46162EE5D5705B89E8E7 /* Pods-MobileProvision.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		89031C08D5BED2D3E0B0F2BF1874D428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC7B6254075E23416D628730E7F7CB2 /* Pods-MobileProvision.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C104F7F091290C3D1E248192F07FE689 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94017B0E40401B42137E8054618EF248 /* Build configuration list for PBXNativeTarget "OpenSSL-lib-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300B66538DB7737CC076C68C9DB9BA6F /* Debug */,
+				2DAA8A1A01F252ED3E54961101C1E939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF4A6F2B7FDA96E3376998D2E871A735 /* Build configuration list for PBXNativeTarget "Pods-MobileProvision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58217891F66B0B54E23315E28756681B /* Debug */,
+				89031C08D5BED2D3E0B0F2BF1874D428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
