@@ -22,3 +22,5 @@
 + 2_0.0 RSA iOS 加解密
 
 + 2_1.0 mobileProvision证书解析（证书名称，证书ID，证书过期时间，cer过期时间）
+
++ 2_2.0 MemoryClean iOS缓存清理 
